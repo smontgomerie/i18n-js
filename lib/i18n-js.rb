@@ -7,6 +7,7 @@ module SimplesIdeias
     require "i18n-js/railtie" if Rails.version >= "3.0"
     require "i18n-js/engine" if Rails.version >= "3.1"
     require "i18n-js/middleware"
+    require "i18n-js/source"
 
     # deep_merge by Stefan Rusterholz, see http://www.ruby-forum.com/topic/142809
     MERGER = proc { |key, v1, v2| Hash === v1 && Hash === v2 ? v1.merge(v2, &MERGER) : v2 }
